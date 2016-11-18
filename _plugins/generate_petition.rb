@@ -62,7 +62,7 @@ class PetitionParser
 
     html.xpath("//p").each do |p|
       if p.text =~ re
-        p.content = p.text.gsub(re, I18n.l(Date.parse($1), format: "%d %b %Y"))
+        p.content = p.text.gsub(re, I18n.l(Date.parse($1), format: "%d %b %Y").downcase)
       end
     end
   end

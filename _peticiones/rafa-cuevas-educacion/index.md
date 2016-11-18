@@ -1,7 +1,10 @@
 ---
+title: "Consulta sobre los colegios por tipo de enseñanza y municipio"
+date:   2016-11-18 15:17:42 +0100
+layout: default
 ---
 
-# Consulta sobre los colegios por tipo de enseñanza y municipio
+# {{page.title}}
 
 ## Enviada por
 
@@ -29,11 +32,11 @@ peticion.png
 
 ## Respuesta afirmativa
 
-Sí o No (borra la opción que no sea correcta)
+Sí
 
 ## Han proporcionado los datos?
 
-Sí o No (borra la opción que no sea correcta)
+No
 
 ## Estado
 

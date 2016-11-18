@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% for petition in site.peticiones %}
+
+<div class="story">
+  <h2><a href="{{ petition.url | prepend: site.baseurl }}">{{ petition.title }}</a></h2>
+</div>
+{% endfor %}
