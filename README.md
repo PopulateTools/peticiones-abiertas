@@ -16,7 +16,7 @@ Para dar de alta esta nueva petición tienes que seguir tres sencillos pasos:
 
 ## Plantilla
 
-Copia esta plantilla dentro de tu fichero `index.md` y sustitulle los textos entre `<>`. Si vas a incluír imágenes o archivos de datos, sustituye también el nombre de los archivos.
+Copia esta plantilla dentro de tu fichero `index.md` y sustituye los textos entre `<>`. Si vas a incluir imágenes o archivos de datos, sustituye también el nombre de los archivos.
 
 ```markdown
 # <Escribe aquí el título de la petición>
