@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="es">
+    {% include head.html %}
+    <body>
+        <div class="pure-g">
+            {% include header.html %}
 
-  PRE
-
-  {{ content }}
-
-  POST
-
-</body>
+            {{ content }}
+            
+            {% include footer.html %}
+        </div>
+    </body>
 </html>
