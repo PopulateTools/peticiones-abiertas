@@ -11,7 +11,8 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.1rem;
-    font-size: $small
+    font-size: $small;
+    text-align: center;
 }
 .logo {
     max-width: 100px;
@@ -24,5 +25,8 @@
 @media (min-width: 768px) {
     .wrapper {
         margin: 2rem;
+    }
+    .petitionTitle {
+        text-align: left;
     }
 }
