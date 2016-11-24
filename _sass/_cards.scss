@@ -8,19 +8,18 @@
 }
 .meta {
     color: $grey;
-}
-.downloadLink {
-    margin-top: 3px;
-}
-.download {
-    margin-right: 0.3rem;
-    vertical-align: bottom;
-    fill: $grey;
+    font-size: $small;
 }
 .date {
-    margin-top: 3px;
     color: $grey;
     font-style: italic;
+}
+.cardHandle {
+    display: inline-block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .cardLink {
     text-decoration: none;
@@ -35,4 +34,23 @@
 }
 .petitionLink:hover {
     text-decoration: underline;
+}
+.downloadLink {
+    float: none;
+    margin-top: 0.5rem;
+}
+.download {
+    margin-right: 0.3rem;
+    vertical-align: bottom;
+    fill: $grey;
+}
+
+@media (min-width: 768px) {
+    .downloadLink {
+        float: right;
+        margin-top: 3px;
+    }
+    .cardHandle {
+        width: auto;
+    }
 }
