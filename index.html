@@ -37,8 +37,6 @@ layout: default
         <div class="card mb2">
             {% if site.data.google_sheet[forloop.index][2] == 'Aceptada' %}
                 <div class="statusBar bgGreen"></div>
-            {% elsif site.data.google_sheet[forloop.index][2] == 'En curso' %}
-                <div class="statusBar bgOrange"></div>
             {% else %}
                 <div class="statusBar bgRed"></div>
             {% endif %}
