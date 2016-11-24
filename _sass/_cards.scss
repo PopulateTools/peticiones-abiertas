@@ -9,12 +9,16 @@
 .meta {
     color: $grey;
 }
+.downloadLink {
+    margin-top: 3px;
+}
 .download {
     margin-right: 0.3rem;
     vertical-align: bottom;
     fill: $grey;
 }
 .date {
+    margin-top: 3px;
     color: $grey;
     font-style: italic;
 }

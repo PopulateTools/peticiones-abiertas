@@ -17,3 +17,12 @@
     max-width: 100px;
     margin: 0 auto;
 }
+.wrapper {
+    margin: 1rem;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        margin: 2rem;
+    }
+}
