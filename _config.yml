@@ -16,12 +16,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# Collections
-collections:
-  peticiones:
-    output: true
-    permalink: /peticiones/:path
-
 # Google Drive
 gdrive:
   sheet: "Peticiones Abiertas"
