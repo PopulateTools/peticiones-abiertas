@@ -1,11 +1,11 @@
+.mainCopy {
+    text-align: center;
+}
 .mainTitle {
     font-weight: 700;
     display: table;
     font-size: $h2;
     border-bottom: 4px solid $light_blue;
-}
-.mainDesc {
-    font-family: $sans;
 }
 .petitionTitle {
     text-transform: uppercase;
