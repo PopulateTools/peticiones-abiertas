@@ -31,30 +31,30 @@ layout: default
 
 <div class="pure-u-1 pure-u-md-2-3">
     <div class="wrapper">
-        <h4 class="petitionTitle mb1">Últimas peticiones registradas</h4>
-
-        {% for petition in site.peticiones %}
+        <h4 class="petitionTitle mb1">Últimas peticiones registradas</h4>        
+        
+        {% for row in site.data.google_sheet offset:1 %}
         <div class="card mb2">
-            {% if petition.status == 'aceptada' %}
+            {% if site.data.google_sheet[forloop.index][2] == 'Aceptada' %}
                 <div class="statusBar bgGreen"></div>
-            {% elsif petition.status == 'en curso' %}
+            {% elsif site.data.google_sheet[forloop.index][2] == 'En curso' %}
                 <div class="statusBar bgOrange"></div>
             {% else %}
                 <div class="statusBar bgRed"></div>
             {% endif %}
             <div class="p1">
                 <div class="meta">
-                    <div class="cardHandle">{{petition.author}} / <a class="cardLink" href="https://twitter.com/{{petition.handle}}">@{{petition.handle}}</a></div>
-                    <span class="date pull-right">{{petition.date | date: '%d/%m/%y'}}</span>
+                    <div class="cardHandle">{{site.data.google_sheet[forloop.index][6]}} / <a class="cardLink" href="https://twitter.com/{{site.data.google_sheet[forloop.index][7]}}">{{site.data.google_sheet[forloop.index][7]}}</a></div>
+                    <span class="date pull-right">{{site.data.google_sheet[forloop.index][0] | date: "%d/%m/%y"}}</span>
                 </div>
 
-                <h3 class="mb1 mt1"><a class="petitionLink" href="{{ petition.url | prepend: site.baseurl }}">{{ petition.title }}</a></h3>
+                <h3 class="mb1 mt1"><a class="petitionLink" href="{{ petition.url | prepend: site.baseurl }}">{{site.data.google_sheet[forloop.index][1]}}</a></h3>
 
                 <div class="meta">
-                    <div class="up">{{petition.status}}</span> / <a class="cardLink" href="/{{petition.org}}">{{petition.org}}</a>
-                    {% if petition.status == 'aceptada' %}
+                    <div class="up">{{site.data.google_sheet[forloop.index][2]}}</span> / <a class="cardLink" href="/{{site.data.google_sheet[forloop.index][3]}}">{{site.data.google_sheet[forloop.index][3]}}</a>
+                    {% if site.data.google_sheet[forloop.index][2] == 'Aceptada' %}
                         <div class="downloadLink pull-right">
-                            <a class="cardLink up" href="{{petition.data}}">
+                            <a class="cardLink up" href="{{site.data.google_sheet[forloop.index][10]}}">
                                 <svg width="15" height="15" class="download" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg"><path d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg>
                                 <span>Descargar datos</span>
                             </a>

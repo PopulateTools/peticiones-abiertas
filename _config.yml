@@ -25,3 +25,4 @@ collections:
 # Google Drive
 gdrive:
   sheet: "Peticiones Abiertas"
+  cache_period: 5 seconds
