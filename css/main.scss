@@ -10,7 +10,8 @@
         "utils",
         "fonts",
         "home",
-        "header"
+        "header",
+        "cards"
 ;
 html {
     font-size: 100%;
@@ -23,11 +24,13 @@ body {
     color: #333;
     line-height: 1.3;
 }
+.pure-g [class*="pure-u"] {
+    font-family: $sans;
+}
 p {
     margin-bottom: 1.3rem;
 }
 h1, h2, h3, h4 {
-    font-family: $sans;
     margin: 1.414rem 0 0.5rem;
     font-weight: inherit;
     line-height: 1.2;

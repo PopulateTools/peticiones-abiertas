@@ -7,7 +7,7 @@
 .mainDesc {
     font-family: $sans;
 }
-.requestsTitle {
+.petitionTitle {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.1rem;
@@ -16,6 +16,4 @@
 .logo {
     max-width: 100px;
     margin: 0 auto;
-}
-@media (min-width: 768px) {
 }

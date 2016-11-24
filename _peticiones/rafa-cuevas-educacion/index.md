@@ -1,55 +1,60 @@
 ---
 title: "Consulta sobre los colegios por tipo de enseñanza y municipio"
 date:   2016-11-18 15:17:42 +0100
-layout: default
+layout: request
+author: Rafa de las Cuevas
+handle: rafadelascuevas
+status: aceptada
+org: Ministerio de Educación
+data: datos madrid.csv
 ---
 
 # {{page.title}}
 
-## Enviada por
+### Enviada por
 
 [Rafa de las Cuevas](https://twitter.com/rafadelascuevas/)
 
-## Organización
+### Organización
 
 Populate
 
-## Fecha envío
+### Fecha envío
 
 2016-10-10
 
-## Dirigida a
+### Dirigida a
 
 Ministerio de Cultura, Educación y Deporte
 
-## Texto de la petición
+### Texto de la petición
 
 wadus wadus
 
-## Copia de la petición
+### Copia de la petición
 
 peticion.png
 
-## Respuesta afirmativa
+### Respuesta afirmativa
 
 Sí
 
-## Han proporcionado los datos?
+### Han proporcionado los datos?
 
 No
 
-## Estado
+### Estado
 
 Contestada el 2016-10-30
 
-## Respuesta
+### Respuesta
 
 wadus wadus
 
-## Datos aportados
+### Datos aportados
 
 datos madrid.csv
 
-## Copia de la respuesta
+### Copia de la respuesta
 
 respuesta.png

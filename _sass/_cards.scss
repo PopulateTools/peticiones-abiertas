@@ -1,0 +1,33 @@
+.card {
+    padding: 1rem;
+    min-height: 100px;
+    max-height: 140px;
+    border: 1px solid $light_blue;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.10);
+}
+.meta {
+    color: $grey;
+}
+.download {
+    margin-right: 0.3rem;
+    vertical-align: bottom;
+    fill: $grey;
+}
+.date {
+    color: $grey;
+    font-style: italic;
+}
+.cardLink {
+    text-decoration: none;
+    color: $grey;
+}
+.cardLink:hover {
+    text-decoration: underline;
+}
+.petitionLink {
+    text-decoration: none;
+    color: $black;
+}
+.petitionLink:hover {
+    text-decoration: underline;
+}
