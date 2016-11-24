@@ -1,10 +1,41 @@
 ---
 layout: default
 ---
-<div class="pure-u-1 pure-u-md-1-3 mb4">
-    <h1>Peticiones abiertas</h1>
+<div class="pure-u-1 pure-u-md-1-3 mb2">
+    <div class="m2">
+        <div class="mainCopy mb2">
+            <h1 class="mainTitle">Peticiones abiertas</h1>
+            <p class="mainDesc">La ley de transparencia permite a cualquier ciudadano realizar peticiones de información a organizaciones públicas. Y ellas están obligadas a responder.</p>
+            <p class="mainDesc">Actualmente no hay ningún registro de las respuestas y los datos aportados, lo que es desperdicio de energía. Y realizar una petición no es sencillo.</p>
+            <p class="mainDesc">Con este sitio nos proponemos:</p>
+            <p class="mainDesc">- crear un registro público de peticiones de información y de los datos que las instituciones aportan como respuesta (y dejar constancia de las negativas)</p>
+            <p class="mainDesc">- mostrar ejemplos de peticiones de información para inspirar y ayudar a realizar otras nuevas.</p>
+        </div>
+        <footer>
+            <div class="pure-u-1 pure-u-md-5-5 center mb2">
+                <img class="logo img-fluid" src="/img/logo-populate-tools.png" alt="Populate Tools">
+            </div>
+            <div class="pure-g center">
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <a href="https://twitter.com/{{site.twitter_username}}">Twitter</a>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <a href="https://github.com/{{site.github_username}}">GitHub</a>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <a href="mailto:{{site.email}}">email</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
 
-    {% for petition in site.peticiones %}
-    <h2><a href="{{ petition.url | prepend: site.baseurl }}">{{ petition.title }}</a></h2>
-    {% endfor %}
+<div class="pure-u-1 pure-u-md-2-3">
+    <div class="m2">
+        <h4 class="requestsTitle">Últimas peticiones registradas</h4>
+
+        {% for petition in site.peticiones %}
+        <h4><a href="{{ petition.url | prepend: site.baseurl }}">{{ petition.title }}</a></h4>
+        {% endfor %}
+    </div>
 </div>

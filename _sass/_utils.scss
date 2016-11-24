@@ -1,3 +1,7 @@
+.img-fluid {
+    display: block;
+    max-width: 100%;
+}
 .center {
     text-align: center;
 }
@@ -12,4 +16,16 @@
 }
 .mb4 {
     margin-bottom: 4rem;
+}
+.m1 {
+    margin: 1rem;
+}
+.m2 {
+    margin: 2rem;
+}
+.m3 {
+    margin: 3rem;
+}
+.m4 {
+    margin: 4rem;
 }

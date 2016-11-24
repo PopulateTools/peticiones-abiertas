@@ -1,0 +1,18 @@
+.requestsBar {
+    display: flex;
+}
+.requestBar {
+    height: 15px;
+}
+.requestYes {
+    background: $green;
+    width: 70%;
+}
+.requestInProgress {
+    background: $orange;
+    width: 10%;
+}
+.requestNo {
+    background: $red;
+    width: 20%;
+}

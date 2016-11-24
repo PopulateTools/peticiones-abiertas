@@ -1,0 +1,21 @@
+.mainTitle {
+    font-weight: 700;
+    display: table;
+    font-size: $h2;
+    border-bottom: 4px solid $light_blue;
+}
+.mainDesc {
+    font-family: $sans;
+}
+.requestsTitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    font-size: $small
+}
+.logo {
+    max-width: 100px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+}
