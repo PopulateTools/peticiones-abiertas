@@ -1,9 +1,11 @@
 .card {
-    padding: 1rem;
     min-height: 100px;
     max-height: 140px;
     border: 1px solid $light_blue;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.10);
+}
+.statusBar {
+    height: 5px;
 }
 .meta {
     color: $grey;
