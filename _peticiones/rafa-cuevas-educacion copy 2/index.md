@@ -4,7 +4,7 @@ date:   2016-11-18 15:17:42 +0100
 layout: request
 author: Rafa de las Cuevas
 handle: rafadelascuevas
-status: aceptada
+status: en curso
 org: Ministerio de Educación
 data: datos madrid.csv
 ---
