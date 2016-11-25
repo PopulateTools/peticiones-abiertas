@@ -1,0 +1,24 @@
+.petitionIndicator {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.petitionLink {
+  color: $black;
+  text-decoration: none;
+}
+.petitionLink:hover {
+  text-decoration: underline;
+}
+.petitionSection {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #ccc;
+}
+.sectionCheck {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .petitionIndicator {
+    margin-bottom: 1rem;
+  }
+}
