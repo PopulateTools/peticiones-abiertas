@@ -1,7 +1,47 @@
 ---
 layout: default
 ---
-<div class="pure-u-1 pure-u-md-1-3">
-    {{content}}
-</div>
 
+<div class="pure-u-1 pure-u-md-1-3">
+  <p>{{page.path}}</p>
+
+  <p>ID</p>
+  <p>{{page.id}}</p>
+
+  <p>Título</p>
+  <p>{{page.title}}</p>
+
+  <p>Estado</p>
+  <p>{{page.status}}</p>
+
+  <p>A quién</p>
+  <p>{{page.receiver}}</p>
+
+  <p>Fecha envío</p>
+  <p>{{page.creation_date}}</p>
+
+  <p>Autor</p>
+  <p>{{page.author_name}}</p>
+  <p>{{page.author_twitter_handle}}</p>
+  <p>{{page.author_email}}</p>
+  <p>{{page.author_organization}}</p>
+
+  <p>Texto petición</p>
+  {{page.request_text}}
+
+  <p>URL pdf petición</p>
+  <p>{{page.request_pdf_url}}</p>
+
+  <p>Texto resolucion</p>
+  {{page.resolution_text}}
+
+  <p>Fecha resolución</p>
+  <p>{{page.resolution_date}}</p>
+
+  <p>URL pdf resolucion</p>
+  <p>{{page.resolution_pdf_url}}</p>
+
+  <p>URL datos resolucion</p>
+  <p>{{page.resolution_data_url}}</p>
+
+</div>

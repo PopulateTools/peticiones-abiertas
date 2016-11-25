@@ -1,10 +1,7 @@
 <header class="pure-u-1 pure-u-md-3-3">
     <div class="header">
         <h1 class="mainTitle"><a class="headerLink" href="/">{{site.title}}</a></h1>
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="headerLink" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          {% endif %}
-        {% endfor %}
+        {% assign about_page = site.pages | where:"name","acerca-de.md" | first %}
+        <a class="headerLink" href="{{ about_page.url | relative_url }}">{{ about_page.title | escape }}</a>
     </div>
 </header>
