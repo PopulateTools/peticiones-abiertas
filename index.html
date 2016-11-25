@@ -31,8 +31,8 @@ layout: default
 
 <div class="pure-u-1 pure-u-md-2-3">
     <div class="wrapper">
-        <h4 class="petitionTitle mb1">Últimas peticiones registradas</h4>        
-        
+        <h4 class="petitionTitle mb1">Últimas peticiones registradas</h4>
+
         {% for row in site.data.google_sheet offset:1 %}
         <div class="card mb2">
             {% if site.data.google_sheet[forloop.index][2] == 'Aceptada' %}
