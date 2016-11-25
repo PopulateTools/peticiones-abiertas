@@ -10,9 +10,16 @@ layout: default
       <div class="pure-u-1 pure-u-md-1-5">
         <p class="petitionIndicator small grey up">Enviada por</p>
       </div>
-      <div class="pure-u-1 pure-u-md-4-5">
-        <p class="mt0 mb1"><a class="petitionLink" href="https://twitter.com/{{page.author_twitter_handle}}">{{page.author_name}}</a> ({{page.author_organization}}), el {{page.creation_date}}.</p>
-      </div>
+      
+      {% if page.author_name != '' %}
+        <div class="pure-u-1 pure-u-md-4-5">
+          <p class="mt0 mb1"><a class="petitionLink" href="https://twitter.com/{{page.author_twitter_handle}}">{{page.author_name}}</a>{% if page.author_organization != '' %} ({{page.author_organization}}){% endif %}, el {{page.creation_date}}.</p>
+        </div>
+      {% else %}
+        <div class="pure-u-1 pure-u-md-4-5">
+          <p class="mt0 mb1"><i>Anónimo</i>{% if page.author_organization != '' %} ({{page.author_organization}}){% endif %}, el {{page.creation_date}}.</p>
+        </div>
+      {% endif %}
       
       <div class="pure-u-1 pure-u-md-1-5">
         <p class="petitionIndicator small grey up">Dirigida a</p>
@@ -95,13 +102,15 @@ layout: default
         </div>
       {% endif %}
       
-      {% if page.resolution_data_url != '' %}
-        <div class="pure-u-1 pure-u-md-1-5">
-          <p class="petitionIndicator small grey up">Datos de la petición</p>
-        </div>
-        <div class="pure-u-1 pure-u-md-4-5">
-          <a class="pure-button pure-button-primary fw700 mb1" href="{{page.resolution_data_url}}"><svg class="vm" width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg> Descargar datos</a>
-        </div>
+      {% if page.status == 'Aceptada' %}
+        {% if page.resolution_data_url != '' %}
+          <div class="pure-u-1 pure-u-md-1-5">
+            <p class="petitionIndicator small grey up">Datos de la petición</p>
+          </div>
+          <div class="pure-u-1 pure-u-md-4-5">
+            <a class="pure-button pure-button-primary fw700 mb1" href="{{page.resolution_data_url}}"><svg class="vm" width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg> Descargar datos</a>
+          </div>
+        {% endif %}
       {% endif %}
     </div>
   </div>
