@@ -1,12 +1,6 @@
 .mainCopy {
     text-align: center;
 }
-.mainTitle {
-    font-weight: 700;
-    display: table;
-    font-size: $h2;
-    // border-bottom: 4px solid $light_blue;
-}
 .petitionTitle {
     text-transform: uppercase;
     font-weight: 700;
@@ -19,12 +13,12 @@
     margin: 0 auto;
 }
 .wrapper {
-    margin: 1rem;
+    margin: 0.5rem 1rem 0 1rem;
 }
 
 @media (min-width: 768px) {
     .wrapper {
-        margin: 2rem;
+        margin: 0.5rem 2rem 0 2rem;
     }
     .petitionTitle {
         text-align: left;
