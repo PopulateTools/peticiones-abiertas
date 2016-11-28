@@ -92,6 +92,15 @@ layout: default
       <div class="pure-u-1 pure-u-md-4-5 responseText">
         {{page.resolution_text | markdownify }}
       </div>
+      
+      {% if page.resolution_pdf_url != '' %}
+        <div class="pure-u-1 pure-u-md-1-5">
+          <p class="petitionIndicator small grey up">Notas del autor</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-4-5">
+          <p class="mt0">{{page.author_notes}}</p>
+        </div>
+      {% endif %}
 
       {% if page.resolution_pdf_url != '' %}
         <div class="pure-u-1 pure-u-md-1-5">

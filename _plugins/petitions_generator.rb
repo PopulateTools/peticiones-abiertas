@@ -29,6 +29,7 @@ module Jekyll
       self.data['request_pdf_url'] = request[13]
       self.data['resolution_pdf_url'] = request[14]
       self.data['author_email'] = request[15]
+      self.data['author_notes'] = request[16]
     end
   end
 
