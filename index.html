@@ -2,63 +2,70 @@
 layout: default
 ---
 <div class="pure-u-1 pure-u-md-1-3">
-    <div class="wrapper">
-        <div class="mainCopy mb4">
-            <p class="left">La ley de transparencia permite a cualquier ciudadano realizar peticiones de información a organizaciones públicas. Y ellas están obligadas a responder.</p>
-            <p class="left">Actualmente no hay ningún registro de las respuestas y los datos aportados, lo que es desperdicio de energía. Y realizar una petición no es sencillo.</p>
-            <p class="left">Con este sitio nos proponemos:</p>
-            <p class="left">- crear un registro público de peticiones de información y de los datos que las instituciones aportan como respuesta (y dejar constancia de las negativas)</p>
-            <p class="left">- mostrar ejemplos de peticiones de información para inspirar y ayudar a realizar otras nuevas.</p>
+  <div class="wrapper">
+    <div class="mainCopy mb4">
+      <p class="left">La ley de transparencia permite a cualquier ciudadano realizar peticiones de información a organizaciones públicas. Y ellas están obligadas a responder.</p>
+      <p class="left">Actualmente no hay ningún registro de las respuestas y los datos aportados, lo que es desperdicio de energía. Y realizar una petición no es sencillo.</p>
+      <p class="left">Con este sitio nos proponemos:</p>
+      <p class="left">- Crear un registro público de peticiones de información y de los datos que las instituciones aportan como respuesta (y dejar constancia de las negativas)</p>
+      <p class="left">- Mostrar ejemplos de peticiones de información para inspirar y ayudar a realizar otras nuevas.</p>
 
-            <h4 class="left">Más información</h4>
-            <ul class="left">
-                <li>Ley de Transparencia</li>
-                <li>Peticiones de Acceso a la Información</li>
-                <li>Consejo de Transparencia</li>
-                <li>Cómo hacer una petición</li>
-            </ul>
-        </div>
-        <footer>
-            <div class="pure-u-1 pure-u-md-5-5 center mb2">
-                <a href="http://populate.tools"><img class="logo img-fluid" src="/img/logo-populate-tools.png" alt="Populate Tools"></a>
-            </div>
-        </footer>
+      <h4 class="left">Más información</h4>
+      <ul class="left">
+        <li><a class="homeLink" href="https://www.boe.es/buscar/doc.php?id=BOE-A-2013-12887">Ley de Transparencia</a></li>
+        <li><a class="homeLink" href="http://transparencia.gob.es/transparencia/transparencia_Home/index/Derecho-de-acceso/Que-es-el-derecho-de-acceso.html">Peticiones de Acceso a la Información</a></li>
+        <li><a class="homeLink" href="http://www.consejodetransparencia.es/ct_Home/index.html">Consejo de Transparencia</a></li>
+        <li><a class="homeLink" href="http://transparencia.gob.es/transparencia/transparencia_Home/index/Derecho-de-acceso/Solicite-informacion.html">Cómo hacer una petición</a></li>
+      </ul>
     </div>
+    <footer>
+      <div class="pure-u-1 pure-u-md-5-5 center mb2">
+        <a href="http://populate.tools"><img class="logo img-fluid" src="/img/logo-populate-tools.png" alt="Populate Tools"></a>
+      </div>
+    </footer>
+  </div>
 </div>
 
 <div class="pure-u-1 pure-u-md-2-3">
-    <div class="wrapper">
-        <h4 class="petitionTitle mb1">Últimas peticiones registradas</h4>
+  <div class="wrapper">
+    <h4 class="petitionTitle mb1">Últimas peticiones registradas</h4>
 
-        {% for row in site.data.google_sheet offset:1 %}
-        <div class="card mb2">
-            {% if site.data.google_sheet[forloop.index][2] == 'Aceptada' %}
-                <div class="statusBar bgGreen"></div>
+    {% for request in site.requests %}
+      <div class="card mb2">
+        {% if request.status == 'Aceptada' %}
+          <div class="statusBar bgGreen"></div>
+        {% else %}
+          <div class="statusBar bgRed"></div>
+        {% endif %}
+
+        <div class="p1">
+          <div class="meta">
+            {% if request.resolution_data_url != '' %}
+              <div class="cardHandle">{{request.author_name}} {% if request.author_twitter_handle != '' %} / <a class="cardLink" href="{{request.author_twitter_handle | prepend: "https://twitter.com/" }}" target="_blank">{{request.author_twitter_handle}}</a> {% endif %}</div>
             {% else %}
-                <div class="statusBar bgRed"></div>
+              <div class="cardHandle"><i>De un anónimo/a</i></div>
             {% endif %}
-            <div class="p1">
-                <div class="meta">
-                    <div class="cardHandle">{{site.data.google_sheet[forloop.index][6]}} / <a class="cardLink" href="https://twitter.com/{{site.data.google_sheet[forloop.index][7]}}">{{site.data.google_sheet[forloop.index][7]}}</a></div>
-                    <span class="date pull-right">{{site.data.google_sheet[forloop.index][0] | date: "%d/%m/%y"}}</span>
-                </div>
+            
+            <span class="date pull-right">{{request.creation_date | date: "%d/%m/%y"}}</span>
+          </div>
 
-                <h3 class="mb1 mt1"><a class="petitionLink" href="{{ petition.url | prepend: site.baseurl }}">{{site.data.google_sheet[forloop.index][1]}}</a></h3>
-
-                <div class="meta">
-                    <div class="up">{{site.data.google_sheet[forloop.index][2]}}</span> / <a class="cardLink" href="/{{site.data.google_sheet[forloop.index][3]}}">{{site.data.google_sheet[forloop.index][3]}}</a>
-                    {% if site.data.google_sheet[forloop.index][2] == 'Aceptada' %}
-                        <div class="downloadLink pull-right">
-                            <a class="cardLink up" href="{{site.data.google_sheet[forloop.index][10]}}">
-                                <svg width="15" height="15" class="download" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg"><path d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg>
-                                <span>Descargar datos</span>
-                            </a>
-                        </div>
-                    {% endif %}
-                    </div>
+          <h3 class="mb1 mt1"><a class="petitionLink" href="{{request.path}}">{{request.title}}</a></h3>
+          
+          <div class="meta">
+            <span class="up">{{request.status}}</span> / <span class="up">{{request.receiver}}</span>
+            {% if request.status == 'Aceptada' %}
+              {% if request.resolution_data_url != '' %}
+                <div class="downloadLink pull-right">
+                  <a class="cardLink up" href="{{request.resolution_data_url}}" target="_blank">
+                    <svg width="15" height="15" class="download" viewBox="0 0 1800 1800" xmlns="http://www.w3.org/2000/svg"><path d="M1344 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h465l135 136q58 56 136 56t136-56l136-136h464q40 0 68 28t28 68zm-325-569q17 41-14 70l-448 448q-18 19-45 19t-45-19l-448-448q-31-29-14-70 17-39 59-39h256v-448q0-26 19-45t45-19h256q26 0 45 19t19 45v448h256q42 0 59 39z"/></svg>
+                    <span>Descargar datos</span>
+                  </a>
                 </div>
-            </div>
+              {% endif %}
+            {% endif %}
+          </div>
         </div>
-        {% endfor %}
-    </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>

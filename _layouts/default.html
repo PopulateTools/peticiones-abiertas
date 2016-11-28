@@ -2,12 +2,12 @@
 <html lang="es">
     {% include head.html %}
     <body>
-        <div class="pure-g">
-            {% include bars.html %}
-            {% include header.html %}
-
-            {{ content }}
-
+        <div class="pure-g mb4">
+            {% include bars.html %}            
+            <div class="column">
+              {% include header.html %}
+              {{ content }}
+            </div>
             <!-- {% include footer.html %} -->
         </div>
     </body>

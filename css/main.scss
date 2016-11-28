@@ -12,8 +12,11 @@
         "home",
         "bars",
         "header",
-        "cards"
+        "cards",
+        "petitions",
+        "pages"
 ;
+
 html {
     font-size: 100%;
     -moz-osx-font-smoothing: grayscale;
@@ -23,10 +26,15 @@ html {
 body {
     font-family: $sans;
     color: #333;
-    line-height: 1.3;
+    line-height: 1.45;
 }
 .pure-g [class*="pure-u"] {
     font-family: $sans;
+}
+.column {
+	width: calc(100% - 0.5rem);
+	max-width: 1400px;
+	margin: auto;
 }
 p {
     margin-bottom: 1.3rem;

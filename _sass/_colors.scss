@@ -3,8 +3,15 @@ $green: #16A085;
 $orange: #E67E22;
 $red: #D0021B;
 $grey: #646464;
+$light_grey: #EFEDEC;
 $black: #333;
 
+.bgGrey {
+  background: $light_grey;
+}
+.grey {
+  color: $grey;
+}
 .bgGreen {
     background: $green;
 }

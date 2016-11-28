@@ -20,3 +20,7 @@ exclude:
 gdrive:
   sheet: "Peticiones Abiertas"
   cache_period: 5 seconds
+
+collections:
+  requests:
+    output: true
