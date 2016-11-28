@@ -31,7 +31,7 @@ layout: default
   <div class="wrapper">
     <h4 class="petitionTitle mb1">Últimas peticiones registradas</h4>
 
-    {% for request in site.requests %}
+    {% for request in site.requests reversed limit:10 %}
       <div class="card mb2">
         {% if request.status == 'Aceptada' %}
           <div class="statusBar bgGreen"></div>
@@ -46,12 +46,12 @@ layout: default
             {% else %}
               <div class="cardHandle"><i>De un anónimo/a</i></div>
             {% endif %}
-            
+
             <span class="date pull-right">{{request.creation_date | date: "%d/%m/%y"}}</span>
           </div>
 
           <h3 class="mb1 mt1"><a class="petitionLink" href="{{request.path}}">{{request.title}}</a></h3>
-          
+
           <div class="meta">
             <span class="up">{{request.status}}</span> / <span class="up">{{request.receiver}}</span>
             {% if request.status == 'Aceptada' %}
