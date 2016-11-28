@@ -15,6 +15,10 @@
 .sectionCheck {
   padding: 1rem;
 }
+.petitionText p:first-child,
+.responseText p:first-child {
+  margin-top: 0;
+}
 
 @media (min-width: 768px) {
   .petitionIndicator {
