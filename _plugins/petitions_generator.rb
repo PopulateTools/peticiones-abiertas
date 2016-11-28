@@ -38,7 +38,7 @@ module Jekyll
     def generate(site)
       if site.layouts.key? 'request'
         dir = 'peticiones'
-        site.data['google_sheet'][1..-1].each_with_index do |request, id|
+        site.data['google_sheet'][1..-1].sort{|a,b| Time.parse(a[0]) <=> Time.parse(b[0])}.each_with_index do |request, id|
           id+=1
           site.collections['requests'].docs << RequestPage.new(site, site.source, File.join(dir, id.to_s), request, id)
         end
