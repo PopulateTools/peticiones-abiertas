@@ -41,7 +41,7 @@ layout: default
 
         <div class="p1">
           <div class="meta">
-            {% if request.resolution_data_url != '' %}
+            {% if request.author_name != '' %}
               <div class="cardHandle">{{request.author_name}} {% if request.author_twitter_handle != '' %} / <a class="cardLink" href="{{request.author_twitter_handle | prepend: "https://twitter.com/" }}" target="_blank">{{request.author_twitter_handle}}</a> {% endif %}</div>
             {% else %}
               <div class="cardHandle"><i>De un anónimo/a</i></div>
