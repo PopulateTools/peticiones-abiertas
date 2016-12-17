@@ -31,7 +31,7 @@ layout: default
   <div class="wrapper">
     <h4 class="petitionTitle mb1">Últimas peticiones registradas</h4>
 
-    {% for request in site.requests reversed limit:10 %}
+    {% for request in site.requests reversed %}
       <div class="card mb2">
         {% if request.status == 'Aceptada' %}
           <div class="statusBar bgGreen"></div>
