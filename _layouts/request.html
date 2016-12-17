@@ -32,7 +32,7 @@ layout: default
         <p class="petitionIndicator small grey up">Texto de la petición</p>
       </div>
       <div class="pure-u-1 pure-u-md-4-5 petitionText">
-        {{page.request_text | markdownify }}  
+        {{page.request_text | markdownify | auto_link }}
       </div>
 
       {% if page.request_pdf_url != '' %}
@@ -90,9 +90,9 @@ layout: default
         <p class="petitionIndicator small grey up">Respuesta</p>
       </div>
       <div class="pure-u-1 pure-u-md-4-5 responseText">
-        {{page.resolution_text | markdownify }}
+        {{page.resolution_text | markdownify | auto_link }}
       </div>
-      
+
       {% if page.author_notes != '' %}
         <div class="pure-u-1 pure-u-md-1-5">
           <p class="petitionIndicator small grey up">Notas del autor</p>
