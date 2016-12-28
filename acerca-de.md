@@ -12,7 +12,7 @@ Peticiones Abiertas es un sitio para compartir las peticiones que cualquier pers
 
 Si has realizado una petición de información te invitamos a que compartas los datos obtenidos. Se hace en un minuto.
 
-<p class="center"><a class="pure-button pure-button-primary mb1" href="https://docs.google.com/forms/d/e/1FAIpQLSdbAQByKUl2YhFBVn-0pe6diwqy_MC3hSgNi5sW8bY7oXXZCA/viewform"><svg class="vb" width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 864q0-14-9-23l-352-352q-9-9-23-9t-23 9l-351 351q-10 12-10 24 0 14 9 23t23 9h224v352q0 13 9.5 22.5t22.5 9.5h192q13 0 22.5-9.5t9.5-22.5v-352h224q13 0 22.5-9.5t9.5-22.5zm640 288q0 159-112.5 271.5t-271.5 112.5h-1088q-185 0-316.5-131.5t-131.5-316.5q0-130 70-240t188-165q-2-30-2-43 0-212 150-362t362-150q156 0 285.5 87t188.5 231q71-62 166-62 106 0 181 75t75 181q0 76-41 138 130 31 213.5 135.5t83.5 238.5z" fill="#fff"/></svg> Subir petición</a></p>
+<p class="center"><a class="pure-button pure-button-primary mb1" href="https://docs.google.com/forms/d/e/1FAIpQLSdbAQByKUl2YhFBVn-0pe6diwqy_MC3hSgNi5sW8bY7oXXZCA/viewform"><svg class="vb" width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 864q0-14-9-23l-352-352q-9-9-23-9t-23 9l-351 351q-10 12-10 24 0 14 9 23t23 9h224v352q0 13 9.5 22.5t22.5 9.5h192q13 0 22.5-9.5t9.5-22.5v-352h224q13 0 22.5-9.5t9.5-22.5zm640 288q0 159-112.5 271.5t-271.5 112.5h-1088q-185 0-316.5-131.5t-131.5-316.5q0-130 70-240t188-165q-2-30-2-43 0-212 150-362t362-150q156 0 285.5 87t188.5 231q71-62 166-62 106 0 181 75t75 181q0 76-41 138 130 31 213.5 135.5t83.5 238.5z" fill="#fff"/></svg> Añadir petición</a></p>
 
 ### Acerca de (largo) 
 
@@ -25,18 +25,21 @@ Si un ciudadano ha preguntado algo es posible que otra persona tenga una consult
 Peticiones Abiertas también pretende ser una crítica a esta cuestión: Tenemos un sistema de transparencia que no es 100% transparente. Con esta iniciativa esperamos que los portales de transparencia creen un registro público de sus respuestas y Peticiones Abiertas ya no tenga sentido. 
 
 
-### Cómo incluir mi petición de acceso a la información
+### Más información
 
+<ul class="left">
+  <li><a class="homeLink" href="https://www.boe.es/buscar/doc.php?id=BOE-A-2013-12887">Ley de Transparencia</a></li>
+  <li><a class="homeLink" href="http://transparencia.gob.es/transparencia/transparencia_Home/index/Derecho-de-acceso/Que-es-el-derecho-de-acceso.html">Peticiones de Acceso a la Información</a></li>
+  <li><a class="homeLink" href="http://www.consejodetransparencia.es/ct_Home/index.html">Consejo de Transparencia</a></li>
+  <li><a class="homeLink" href="http://transparencia.gob.es/transparencia/transparencia_Home/index/Derecho-de-acceso/Solicite-informacion.html">Cómo hacer una petición</a></li>
+</ul>
 
-### La Ley de Transparencia
+### Proyecto abierto
 
-
-### Cómo hacer una petición
-
-
-### El Consejo de Transparencia y Buen Gobierno
-
+Este es un proyecto abierto. Cualquiera puede contribuir con su contenido para mostrar más ejemplos e inspirar a otros. El código que da soporte a este site es abierto y puedes contribuir: [github.com/populatetools/peticiones-abiertas](https://github.com/populatetools/peticiones-abiertas)
 
 ### Quiénes somos
 
 Peticiones Abiertas es un proyecto abierto impulsado por [Populate](http://populate.tools)/[Gobierto](http://gobierto.es), y un grupo de periodistas y ciudadanos interesados en el fomento de la transparencia.
+
+

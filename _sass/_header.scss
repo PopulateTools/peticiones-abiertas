@@ -1,5 +1,7 @@
 .header {
   margin: 1rem 1rem 0 1rem;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid $light_grey;
 }
 .mainTitle {
   font-weight: 700;
@@ -9,8 +11,6 @@
   // border-bottom: 4px solid $light_blue;
 }
 .headerLink {
-  color: $black;
-  text-decoration: none;
   display: block;
 }
 .headerButton {
@@ -21,10 +21,16 @@
 .aboutLink {
   text-decoration: underline;
 }
+h1.mainTitle {
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
 
 @media (min-width: 768px) {
   .header {
-    margin: 2rem 2rem 0 2rem;
+    margin: 2rem 2rem 2rem 2rem;
   }
   .headerLink {
     display: inline-block;
