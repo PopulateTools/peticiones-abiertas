@@ -1,4 +1,7 @@
 require 'byebug'
+require 'rubygems'
+require 'algoliasearch'
+require 'active_support/all'
 
 module Jekyll
 
@@ -37,13 +40,30 @@ module Jekyll
     safe true
 
     def generate(site)
+      Algolia.init application_id: ENV['ALGOLIA_APPLICATION_ID'], api_key: ENV['ALGOLIA_API_KEY']
+
       if site.layouts.key? 'request'
         dir = 'peticiones'
         site.data['google_sheet'][1..-1].sort{|a,b| Time.parse(a[0]) <=> Time.parse(b[0])}.each_with_index do |request, id|
           id+=1
-          site.collections['requests'].docs << RequestPage.new(site, site.source, File.join(dir, id.to_s), request, id)
+          request_page = RequestPage.new(site, site.source, File.join(dir, id.to_s), request, id)
+          site.collections['requests'].docs << request_page
+          index(request_page)
         end
       end
+    end
+
+    private
+
+    def index(request_page)
+      index = Algolia::Index.new("petitions")
+      #index.set_settings({"searchableAttributes" => ["title", "author_name", "receiver", "author_twitter_handle", "category", "author_organization"]})
+
+      index.add_object(request_page.data.except(*ignored_attributes).merge('objectID' => request_page.data['id']))
+    end
+
+    def ignored_attributes
+      %W{ id request layout creation_date resolution_date resolution_data_url request_pdf_url resolution_pdf_url author_email author_notes }
     end
   end
 

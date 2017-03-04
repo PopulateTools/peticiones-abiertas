@@ -9,3 +9,5 @@ end
 gem "rinku"
 
 gem "byebug"
+gem "algoliasearch"
+gem "activesupport"
